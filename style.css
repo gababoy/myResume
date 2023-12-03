@@ -1,0 +1,449 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #001C30;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    background: #0070BF;
+    background-position: center;
+    background-size: cover;
+}
+
+footer {
+    background-color: #0070BF;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 5vh;
+    color: white;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #ffff;
+    font-size: 1rem;
+}
+
+/* Navigation Bar */
+
+.navbar {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar .logo:hover {
+    transform: scale(1.2);
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+header .links a{
+    color: #ffff;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 2px 15px;
+    transition: 0.3s;
+    transition-property: inherit;
+    transform: scale(0.4) ease;
+}
+
+header .links a:hover,
+header .links a.active{
+    scale: 1.3;
+    background: #ffff;
+    color: black;
+    border-radius: 20px;
+}
+
+.navbar .links a {
+    color: #ffff;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 2px 15px;
+}
+
+.navbar .toggle_btn {
+    color: #ffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar .toggle_btn {
+    color: #ffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffff;
+    color: black;
+    height: 50px;
+    width: 200px;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.action_btn:hover{
+    scale: 1.1;
+}
+
+.action_btn:active{
+    scale: 0.95;
+}
+
+footer .links {
+    display: flex;
+    gap: 2rem;
+}
+
+header .links a{
+    color: #ffff;
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 2px 15px;
+    transition: 0.3s;
+    transition-property: inherit;
+    transform: scale(0.2) ease;
+}
+
+header .links a:active{
+    scale: 0.95;
+}
+
+/* Dropdown Menu */
+
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown_menu .action_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    background: #ffff;
+}
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background: #0070BF;
+}
+
+.hero-section .content h1 {
+    text-align: left;
+    font-size: 90px;
+    font-weight: 1200;
+    letter-spacing: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero-section .content p {
+    text-align: justify;
+    font-size: 20px;
+    font-family: 'Source Sans 3';
+    font-weight: 550;
+}
+
+.slant-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.shadow-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(160% -230%, 0 210%, 100% 120%);
+    height: 100vh;
+    flex-direction: column;
+    background-image: url('./src/kevin-jd-S5SQzWdUhoE-unsplash.jpg');
+    background-size: cover;
+    background-position:center;
+    background-position-x: 750px;
+}
+
+.content {
+    position: absolute;
+    top: 70%;
+    left: 45%;
+    transform: translate(-75%, -100%);
+    color: #fff;
+}
+
+.body {
+    height: 70vh;
+    position: right;
+    background: url('src/scott-blake-x-ghf9LjrVg-unsplash.jpg');
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.new-content {
+    display: flex;
+}
+
+.new-content {
+    height: 70vh;
+    background: linear-gradient(to right, #0070BF 30%, #0070BF 40%, transparent 40%, transparent 100%);
+    color: #fff;
+    padding: 40px 110px;
+}
+
+.new-content h2 {
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+.left-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-column p {
+    font-family: 'Source Sans 3';
+    font-size: 20px;
+}
+
+.right-column {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gallery {
+    float: left;
+    width: 30%;
+    height: 40%;
+    border-radius: 15px;
+    background: #ffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out; /* Add transition property */
+}
+
+.gallery:hover {
+    transform: scale(1.25); /* Add hover effect - adjust scale as needed */
+}
+
+.gallery img {
+    width: 90%;
+    height: 80%;
+    max-height: 70%; /* Adjust as needed */
+    object-fit: cover;
+}
+
+.desc {
+    padding: 15px;
+    text-align: center;
+    color: black;
+}
+
+.contacts {
+    height: 25vh;
+    width: 100%;
+    background: #001C30;
+    display: flex;
+    flex: 3;
+    flex-direction: row;
+    color: #ffff;
+    padding: 40px 40px;
+}
+
+.contacts h2{
+    gap: 2rem;
+    font-size: 26px;
+    margin-bottom: 10px;
+    text-decoration: underline 3px #0070BF;
+}
+
+.contacts p {
+    font-family: 'sans-serif';
+    font-size: 20px;
+}
+
+.left-contacts {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.data {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.separation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.separation p {
+    padding-left: 20px;
+    font-family: 'sans-serif';
+    font-size: 20px;
+}
+
+.right-contacts {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* WELCOME */
+
+section#welcome {
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffff;
+}
+
+#welcome h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 960px) {
+    .navbar .links, .navbar .action_btn {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        right: 0;
+        top: 60px;
+        display: none;
+        position: absolute;
+        height: 0;
+        width: 300px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+        border-radius: 10px;
+        overflow: hidden;
+        transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        z-index: 999; /* Ensure a higher z-index */
+    }
+
+    .dropdown_menu.open {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar .links, .navbar .action_btn {
+        display: none;
+    }
+
+    .navbar .toggle_btn {
+        display: block;
+    }
+
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+}
